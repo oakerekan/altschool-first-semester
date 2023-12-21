@@ -27,6 +27,6 @@ Methods:
 
 
 <h2>Notes</h2>
-The Expense class represents individual expenses with unique IDs, titles, amounts, creation times, and update times.
-The ExpenseDatabase class manages a list of expenses, allowing addition, removal, and retrieval based on ID or title.
+The Expense class represents individual expenses with unique IDs, titles, amounts, creation times, and update times.<br>
+The ExpenseDatabase class manages a list of expenses, allowing addition, removal, and retrieval based on ID or title.<br>
 The code uses UUID for unique identification, datetime for timestamp management, and dictionary formats for easy conversion and serialization.
