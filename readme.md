@@ -8,6 +8,7 @@ In this project we created two classes: "Expense" and "ExpenseDatabase"
 Have methods such as __init__, update and to_dict.
 
 Methods:
+
 __init__(self, title, amount): Initializes an Expense object with a unique ID, title, amount, creation time, and update time.
 update(self, title=None, amount=None): Updates the title and/or amount of the expense and modifies the updated_at timestamp accordingly.
 to_dict(self): Converts the expense object into a dictionary format for easy serialization.
