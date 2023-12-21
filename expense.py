@@ -53,4 +53,3 @@ class ExpenseDatabase:
 
     def to_dict(self):
         return self.expenses.copy()
-
