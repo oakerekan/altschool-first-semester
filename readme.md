@@ -1,7 +1,5 @@
-This is the remote repository which contains the implement of the first semester hands-on project for the data enginee course on altschool
 
-
-Expense Class:
+Expense Class
 Attributes:
 id: Unique identifier for the expense (UUID4 format).
 title: Title/name of the expense.
