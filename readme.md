@@ -1,18 +1,20 @@
-**Building an Expense Tracker in Python using Python Class.**
+<h1>Building an Expense Tracker in Python using Python Class.</h1>
 
 This project intends to build an expense tracker using python object-oriented programming concepts. 
 
 In this prroject we created two classes: "Expense" and "ExpenseDatabase"
 
-The class Expense, have methods such as __init__, uodate and to_dict
+<h2>Expense Class</h2>
+Have methods such as __init__, uodate and to_dict
 
 Methods:
 __init__(self, title, amount): Initializes an Expense object with a unique ID, title, amount, creation time, and update time.
 update(self, title=None, amount=None): Updates the title and/or amount of the expense and modifies the updated_at timestamp accordingly.
 to_dict(self): Converts the expense object into a dictionary format for easy serialization.
 
+<h2>ExpenseDatabase Class</h2>
 
-The class ExpenseDatabase, have methods such as __init__, add_expense, remove_expense, get_expense_by_id, get expense_by_title, to_dict
+Have methods such as __init__, add_expense, remove_expense, get_expense_by_id, get expense_by_title, to_dict
 
 Methods:
 __init__(self): Initializes an empty list to store expenses.
