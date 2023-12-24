@@ -21,6 +21,7 @@ class Expense:
         if amount is not None:
             self.amount = amount
         self.updated_at = datetime.now(timezone.utc)
+        return f" Updated expense is {expense}"
 
     def to_dict(self):
         """ A method that returns a dictionary of the set of values inputted after the update method is called.
@@ -42,31 +43,30 @@ class ExpenseDatabase:
     def __init__(self):
         """ A method that initializes an empty list of expenses.
         """
-        self.database = []
+        self.expenses = []
 
 
 
     def add_expense(self, expense):
         """ A method that takes an expense as a parameter and adds it to the list of expenses.
         """
-        self.database.append(expense)
+        self.expenses.append(expense)
         print(f"{expense} added succesfully")
-    
+        return self.expenses    
 
     def remove_expense(self, expense_id):
         """ A method that takes an expense_id as a parameter and removes the expense with the given id from the list of expenses.
         """
-        for expense in self.database:
-            if expense.id == expense_id:
-                self.database.remove(expense)
-                return self.database
-                break
+        for expense in self.expenses:
+                if expense.id == expense_id:
+                    self.expenses.remove(expense)
+                    return f"{expense} was succesfully deleted"
     
 
     def get_expense_by_id(self, expense_id):
         """ A method that takes an expense_id as a parameter and returns the expense with the given id.
         """
-        for expense in self.database:
+        for expense in self.expenses:
             if expense.id == expense_id:
                 return expense
         return None
@@ -77,7 +77,7 @@ class ExpenseDatabase:
         """ A method that takes an expense_title as a parameter and returns the expense with the given title.
         """
         matches = []
-        for expense in self.database:
+        for expense in self.expenses:
             if expense.title == expense_title:
                 matches.append(expense)
         return matches
@@ -90,7 +90,7 @@ class ExpenseDatabase:
         'title': expense.title,
         'amount': expense.amount,
         'created_at': expense.created_at.strftime('%Y-%m-%d %H:%M:%S UTC'),
-        'updated_at': expense.updated_at.strftime('%Y-%m-%d %H:%M:%S UTC')} for expense in self.database]
+        'updated_at': expense.updated_at.strftime('%Y-%m-%d %H:%M:%S UTC')} for expense in self.expenses]
 
         dict_of_dicts = {item['id']: item for item in list_of_dicts}
         return dict_of_dicts
@@ -110,7 +110,7 @@ if __name__ == "__main__":
     # This part of the code add expense to the database 
     for expense in [expense_1, expense_2, expense_3, expense_4, expense_5, expense_6]:
         edb.add_expense(expense)
-        print(edb.database)
+        print(edb.expenses)
         print()
         print("-"*30)
         print()
