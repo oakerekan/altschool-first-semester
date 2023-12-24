@@ -43,7 +43,7 @@ Git is a distributed version control system. Maximize the advantages of a full r
 The steps to Initiation a git clone.<br>
 1. Create a folder in the local machine to clone your remote repository into by using the keyword in windows "mkdir {directory-name}", after initially setting your terminal to the right directory using the "cd {directory-name}." <br>
 Any of the terminal on your system can be used for handling git provided it is already installed on your system. Be it Powershell, CommandPrompt, Git Bash, VS Code and even Git GUI.<br>
-2. Cloning the git repository into the folder created using the `git clone https://github.com/oakerekan/altschool-first-semester.git/`` command. <br>
+2. Cloning the git repository into the folder created using the `git clone https://github.com/oakerekan/altschool-first-semester.git/` command. <br>
 
 When you clone a repository, you don't get one file, like you may in other centralized version control systems. By cloning with Git, you get the entire repository - all files, all branches, and all commits.
 
