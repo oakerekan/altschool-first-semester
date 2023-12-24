@@ -82,7 +82,7 @@ edb = ExpenseDatabase()
 ```python
 for expense in [expense_1, expense_2, expense_3, expense_4, expense_5, expense_6]:
     edb.add_expense(expense)
-    print(edb.database)
+    print(edb.expenses)
     print()
     print("-" * 30)
     print()
