@@ -53,3 +53,69 @@ When you clone a repository, you don't get one file, like you may in other centr
 
 
 <h1> 3.0 How to Run the Expense Tracker</h1>
+
+The provided code is a script to demonstrate the functionality of an expense tracking system using the **Expense** and **ExpenseDatabase** classes. Breaking it down in bits to help explain the implementation. <br>
+
+<h2> 3.1 Creating Expense Instances:</h2>
+
+```python
+expense_1 = Expense(title="fuel", amount=10000)
+expense_2 = Expense(title="transport", amount=2000)
+expense_3 = Expense(title="data", amount=1000)
+expense_4 = Expense(title="food", amount=3000)
+expense_5 = Expense(title="shoes", amount=10000)
+expense_6 = Expense(title="shoes", amount=300000)
+```
+
+<h2>3.2 Creating ExpenseDatabase Instance:</h2>
+
+```python
+edb = ExpenseDatabase()
+```
+
+<h2>Adding Expenses to the Database:</h2>
+
+```python
+for expense in [expense_1, expense_2, expense_3, expense_4, expense_5, expense_6]:
+    edb.add_expense(expense)
+    print(edb.database)
+    print()
+    print("-" * 30)
+    print()
+```
+This part of the code adds each expense to the **ExpenseDatabase** and prints the database after each addition.
+
+
+<h2>3.3 Updating an Expense:</h2>
+
+```python
+print(expense_1.update(title="food", amount=5000))
+```
+This part of the code updates expense_1 with a new title ("food") and amount (5000)
+
+<h2>3.4 Removing an Expense</h2>
+
+```python
+print(edb.remove_expense(expense_id=expense_2.id))
+```
+This part of the code removes the expense with **expense_2's ID** from the ExpenseDatabase.
+
+<h2>3.5 Fetching an Expense by ID or Title:</h2>
+```python
+print(edb.get_expense_by_id(expense_id=expense_1.id))
+print(edb.get_expense_by_title(expense_title="shoes"))
+```
+These lines fetch an expense by its ID and title from the ExpenseDatabase.
+
+Converting ExpenseDatabase to a List of Dictionaries:
+
+<h2>3.6 Converting ExpenseDatabase to a List of Dictionaries:</h2> 
+```python
+print(edb.to_dict())
+```
+This part of the code prints the ExpenseDatabase converted to a list of dictionaries.
+
+Note: The to_dict method is likely designed to convert the ExpenseDatabase contents into a list of dictionaries for easy representation or serialization.
+
+Overall, the code provides a basic illustration of expense management functionalities using the defined classes.
+
