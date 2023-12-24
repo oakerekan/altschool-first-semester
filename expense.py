@@ -85,13 +85,15 @@ class ExpenseDatabase:
     def to_dict(self):
         """ A method that returns a copy of the list of expenses.
         """
-        list_of_dict =  [{
+        list_of_dicts =  [{
         'id': expense.id,
         'title': expense.title,
         'amount': expense.amount,
         'created_at': expense.created_at.strftime('%Y-%m-%d %H:%M:%S UTC'),
         'updated_at': expense.updated_at.strftime('%Y-%m-%d %H:%M:%S UTC')} for expense in self.database]
-        return list_of_dict
+
+        dict_of_dicts = {item['id']: item for item in list_of_dicts}
+        return dict_of_dicts
     
 
 if __name__ == "__main__":
@@ -126,5 +128,5 @@ if __name__ == "__main__":
 # This part of the code can fetch expense by title
     print(edb.get_expense_by_title(expense_title="shoes"))
 
-# This part of the code can return a list of dictionaries for the ExpenseDatabase item
+# This part of the code can return a dictionary of dictionaries for the ExpenseDatabase item
     print(edb.to_dict())

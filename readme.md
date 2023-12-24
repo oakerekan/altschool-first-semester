@@ -107,15 +107,13 @@ print(edb.get_expense_by_title(expense_title="shoes"))
 ```
 These lines fetch an expense by its ID and title from the ExpenseDatabase.
 
-Converting ExpenseDatabase to a List of Dictionaries:
-
-<h2>3.6 Converting ExpenseDatabase to a List of Dictionaries:</h2> 
+<h2>3.6 Converting ExpenseDatabase to a dict of Dictionaries:</h2> 
 ```python
 print(edb.to_dict())
 ```
-This part of the code prints the ExpenseDatabase converted to a list of dictionaries.
+This part of the code prints the ExpenseDatabase converted to a dictionary of dictionaries.
 
-Note: The to_dict method is likely designed to convert the ExpenseDatabase contents into a list of dictionaries for easy representation or serialization.
+Note: The to_dict method is likely designed to convert the ExpenseDatabase contents into a dict of dictionaries for easy representation or serialization.
 
 Overall, the code provides a basic illustration of expense management functionalities using the defined classes.
 
