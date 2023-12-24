@@ -101,6 +101,7 @@ print(edb.remove_expense(expense_id=expense_2.id))
 This part of the code removes the expense with **expense_2's ID** from the ExpenseDatabase.
 
 <h2>3.6 Fetching an Expense by ID or Title:</h2>
+
 ```python
 print(edb.get_expense_by_id(expense_id=expense_1.id))
 print(edb.get_expense_by_title(expense_title="shoes"))
@@ -108,6 +109,7 @@ print(edb.get_expense_by_title(expense_title="shoes"))
 These lines fetch an expense by its ID and title from the ExpenseDatabase.
 
 <h2>3.7 Converting ExpenseDatabase to a dict of Dictionaries:</h2> 
+
 ```python
 print(edb.to_dict())
 ```
