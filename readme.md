@@ -73,7 +73,7 @@ expense_6 = Expense(title="shoes", amount=300000)
 edb = ExpenseDatabase()
 ```
 
-<h2>Adding Expenses to the Database:</h2>
+<h2>3.3 Adding Expenses to the Database:</h2>
 
 ```python
 for expense in [expense_1, expense_2, expense_3, expense_4, expense_5, expense_6]:
@@ -86,28 +86,28 @@ for expense in [expense_1, expense_2, expense_3, expense_4, expense_5, expense_6
 This part of the code adds each expense to the **ExpenseDatabase** and prints the database after each addition.
 
 
-<h2>3.3 Updating an Expense:</h2>
+<h2>3.4 Updating an Expense:</h2>
 
 ```python
 print(expense_1.update(title="food", amount=5000))
 ```
 This part of the code updates expense_1 with a new title ("food") and amount (5000)
 
-<h2>3.4 Removing an Expense</h2>
+<h2>3.5 Removing an Expense</h2>
 
 ```python
 print(edb.remove_expense(expense_id=expense_2.id))
 ```
 This part of the code removes the expense with **expense_2's ID** from the ExpenseDatabase.
 
-<h2>3.5 Fetching an Expense by ID or Title:</h2>
+<h2>3.6 Fetching an Expense by ID or Title:</h2>
 ```python
 print(edb.get_expense_by_id(expense_id=expense_1.id))
 print(edb.get_expense_by_title(expense_title="shoes"))
 ```
 These lines fetch an expense by its ID and title from the ExpenseDatabase.
 
-<h2>3.6 Converting ExpenseDatabase to a dict of Dictionaries:</h2> 
+<h2>3.7 Converting ExpenseDatabase to a dict of Dictionaries:</h2> 
 ```python
 print(edb.to_dict())
 ```
